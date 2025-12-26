@@ -113,10 +113,10 @@ if st.session_state.legs:
         st.markdown(
             f"**{i}. {leg['position'].capitalize()} {leg['type'].capitalize()}** — "
             f"K={leg['strike']}, Qty={leg['quantity']}, σ={leg['vol']*100:.1f}%, "
-            f"T={leg['T']:.2f}y → 💰 {leg['premium']:.4f}"
+            f"T={leg['T']:.2f}y → {leg['premium']:.4f}"
         )
 
-    st.markdown(f"### 💵 Total net premium of strategy: **{total_premium:.4f}**")
+    st.markdown(f"### Total net premium of strategy: **{total_premium:.4f}**")
 else:
     st.info("No legs yet. Fill parameters and click 'Add leg'.")
 
